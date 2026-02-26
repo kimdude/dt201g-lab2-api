@@ -12,4 +12,4 @@ Repot innehåller källkod för ett API som hanterar todo-objekt. API:et är kop
 | PUT       | /todo/{id} | Redigera todo |
 | DELETE    | /todo/{id} | Ta bort todo |
 
-__Kim Dudenhöfer, 2026-02-26__
+**Kim Dudenhöfer, 2026-02-26**
