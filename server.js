@@ -8,8 +8,8 @@ const init = async() => {
 
     //Connecting to Hapi server
     const server = Hapi.server({
-        port: 5000,
-        host: "localhost"
+        port: process.env.PORT || 5000,
+        host: "0.0.0.0"
     });
 
     //Connecting to MongoDb
