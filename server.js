@@ -19,38 +19,8 @@ const init = async() => {
         console.log("Error connecting to database: " + error);
     });
 
-    //Model
-    const Todo = mongoose.model("Todo", {
-        name: String,
-        descr: String,
-        status: String
-    });
-
-    server.route([
-        {
-            method: "GET",
-            path: "/todo",
-            handler: async(request, h) => {
-                try {
-                    return await Todo.find();
-                } catch (error) {
-                    return h.response("There was an error: " + error);
-                }
-            }
-        },
-        {
-            method: "POST",
-            path: "/todo",
-            handler: async(request, h) => {
-                try {
-                    const todoItem = new Todo(request.payload);
-                    return await todoItem.save();
-                } catch (error) {
-                    return h.response("There was an error: " + error);
-                }
-            }
-        }
-    ]);
+    //Routes
+    require("./Routes/todo.routes")(server);
 
     //Starting server
     await server.start();
