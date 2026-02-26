@@ -3,6 +3,8 @@
 
 Repot innehåller källkod för ett API som hanterar todo-objekt. API:et är kopplat till en MongoDb databas och använder Mongoose. Det är skapat med ramverket Hapi och publicerat på Render.
 
+(https://dt201g-lab2-api.onrender.com)[Testa API:et: https://dt201g-lab2-api.onrender.com]
+
 ### Router
 
 | Metod     | Route | Resultat |
