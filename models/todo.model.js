@@ -13,6 +13,7 @@ const todoSchema = mongoose.Schema({
     },
     status: {
         type: String,
+        default: "Ej påbörjad",
         required: true
     }
 });
